@@ -7,25 +7,13 @@
   },
   "apiBaseUrl": "https://api.data.amsterdam.nl",
   "map": {
-    "municipality": [
-      "amsterdam",
-      "amstelveen"
-    ],
+    "municipality": ["amsterdam", "amstelveen"],
     "options": {
       "maxBounds": [
-        [
-          52.25168,
-          4.64034
-        ],
-        [
-          52.50536,
-          5.10737
-        ]
+        [52.25168, 4.64034],
+        [52.50536, 5.10737]
       ],
-      "center": [
-        52.3150683,
-        4.8280039
-      ]
+      "center": [52.3150683, 4.8280039]
     }
   },
   "matomo": {
@@ -35,6 +23,6 @@
     "authEndpoint": "https://api.data.amsterdam.nl/oauth2/authorize"
   },
   "keycloak": {
-    "realm": "datapunt-ad-b"
+    "realm": "datapunt-ad"
   }
 }
