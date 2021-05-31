@@ -27,10 +27,19 @@
     "municipality": "weesp",
     "options": {
       "maxBounds": [
-        [52.294084, 5.008621],
-        [52.322999, 5.06381]
+        [
+          52.294084,
+          5.008621
+        ],
+        [
+          52.322999,
+          5.063810
+        ]
       ],
-      "center": [52.3107404, 5.0322487],
+      "center": [
+        52.3107404,
+        5.0322487
+      ],
       "zoom": 10,
       "maxZoom": 14,
       "minZoom": 9
@@ -43,6 +52,6 @@
     "authEndpoint": "https://api.data.amsterdam.nl/oauth2/authorize"
   },
   "keycloak": {
-    "realm": "datapunt-ad"
+    "realm": "datapunt-ad-b"
   }
 }
