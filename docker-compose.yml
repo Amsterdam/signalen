@@ -7,6 +7,8 @@ services:
       args:
         - BUILD_ENV=acc
         - DOCKER_REGISTRY=docker-registry.data.amsterdam.nl:5000
+        - DOCKER_REGISTRY_PATH=/ois/
+        - DOCKER_IMAGE=signalsfrontend
         - DOCKER_IMAGE_TAG=latest
     environment:
       - TZ=Europe/Amsterdam
@@ -19,6 +21,8 @@ services:
       args:
         - BUILD_ENV=acc
         - DOCKER_REGISTRY=docker-registry.data.amsterdam.nl:5000
+        - DOCKER_REGISTRY_PATH=/ois/
+        - DOCKER_IMAGE=signalsfrontend
         - DOCKER_IMAGE_TAG=latest
     environment:
       - TZ=Europe/Amsterdam
@@ -31,6 +35,8 @@ services:
       args:
         - BUILD_ENV=acc
         - DOCKER_REGISTRY=docker-registry.data.amsterdam.nl:5000
+        - DOCKER_REGISTRY_PATH=/ois/
+        - DOCKER_IMAGE=signalsfrontend
         - DOCKER_IMAGE_TAG=latest
     environment:
       - TZ=Europe/Amsterdam
