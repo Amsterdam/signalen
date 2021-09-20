@@ -36,7 +36,8 @@ const iconSlugs = {
   'core task': ':package:',
   spike: ':zap:',
   task: ':zap:',
-  epic: ':tickets:'
+  epic: ':tickets:',
+  subtask: ':bookmark_tabs:'
 }
 
 export const getSemanticVersionType = (version: string): SemanticVersion => {
@@ -70,7 +71,8 @@ export default class ReleaseService {
       unknown: [],
       spike: [],
       task: [],
-      epic: []
+      epic: [],
+      subtask: []
     }
 
     Object.values(issues.reduce((group: GroupedIssues, issue: Issue) => {
@@ -172,7 +174,7 @@ export default class ReleaseService {
     const markdown: string[] = []
     const markdownJiraUrl = (jiraIssue: JiraIssue) => `[[${jiraIssue.key}](${jiraIssue.url})]`
 
-    Object.entries(groupedIssues).forEach(([section, issues]) => {
+    Object.entries(groupedIssues).filter(([section]) => Boolean(section)).forEach(([section, issues]) => {
       if (issues.length === 0) return
 
       markdown.push(`## ${iconSlugs[section as IssueType]} ${plur(section.toUpperCase(), 2)} (${issues.length})\n`)

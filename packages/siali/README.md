@@ -17,18 +17,24 @@ SIA CLI
 * [Commands](#commands)
 <!-- tocstop -->
 
+# Prerequisites
+
+The SIALI script connects to both Github and Jira and for both services you'll need access tokens. Without access tokens, the script cannot create a release branch and corresponding pull request and it won't be able to retrieve the Jira ticket statuses.
+
+Note: the script depends on the Jira account language settings to be English (US).
+
 # Installation
 <!-- installation -->
 - When the package is NOT yet published to npmjs.org
-```sh-session
-$ cd packages/siali
-$ npm link
-```
+   ```sh-session
+   $ cd packages/siali
+   $ npm link
+   ```
 
 -  When the package IS published to npmjs.org
-```sh-session
-$ npm install -g @signalen/siali
-```
+   ```sh-session
+   $ npm install -g @signalen/siali
+   ```
 
 # Usage
 <!-- usage -->
@@ -82,5 +88,5 @@ OPTIONS
   --repository=repository    Repository slug
 ```
 
-_See code: [src/commands/release.ts](https://github.com/Amsterdam/signalen/blob/v0.0.1/src/commands/release.ts)_
+_See code: [src/commands/release.ts](./src/commands/release.ts)_
 <!-- commandsstop -->
