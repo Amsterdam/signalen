@@ -15,7 +15,8 @@ export type IssueType =
   | 'unknown'
   | 'spike'
   | 'task'
-  | 'epic';
+  | 'epic'
+  | 'subtask';
 
 interface BaseIssue {
   description: string
@@ -39,6 +40,7 @@ export interface GroupedIssues {
   spike: Issue[]
   task: Issue[]
   epic: Issue[]
+  subtask: Issue[]
 }
 
 export interface JiraIssue {
