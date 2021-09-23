@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
       context: ./domains/amsterdam/
       args:
-        - BUILD_ENV=acc
+        - BUILD_ENV=acceptance
         - DOCKER_REGISTRY=docker-registry.data.amsterdam.nl:5000
         - DOCKER_REGISTRY_PATH=/ois/
         - DOCKER_IMAGE=signalsfrontend
@@ -19,7 +19,7 @@ services:
       dockerfile: Dockerfile
       context: ./domains/amsterdamsebos/
       args:
-        - BUILD_ENV=acc
+        - BUILD_ENV=acceptance
         - DOCKER_REGISTRY=docker-registry.data.amsterdam.nl:5000
         - DOCKER_REGISTRY_PATH=/ois/
         - DOCKER_IMAGE=signalsfrontend
@@ -33,7 +33,7 @@ services:
       dockerfile: Dockerfile
       context: ./domains/weesp/
       args:
-        - BUILD_ENV=acc
+        - BUILD_ENV=acceptance
         - DOCKER_REGISTRY=docker-registry.data.amsterdam.nl:5000
         - DOCKER_REGISTRY_PATH=/ois/
         - DOCKER_IMAGE=signalsfrontend

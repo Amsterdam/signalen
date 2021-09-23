@@ -6,7 +6,7 @@
 
 # constants
 ENVIRONMENTS := development acceptance production
-CONFIGURATION_SCHEMA_ENVIRONMENTS := acc prod
+CONFIGURATION_SCHEMA_ENVIRONMENTS := acceptance production
 CONFIGURATION_SCHEMA_FILE := app.schema.json
 
 # globals which can be overriden by setting make variables on the CLI
@@ -29,17 +29,11 @@ SCHEMA_DEFINITION_FILE := ${SIGNALS_FRONTEND_PATH}/internals/schemas/${CONFIGURA
 CONFIG_BASE_FILE := ${SIGNALS_FRONTEND_PATH}/app.amsterdam.json
 CONFIG_TEST_FILE := /tmp/app.${DOMAIN}.json
 
-ifeq ($(ENVIRONMENT),acceptance)
-SCHEMA_ENVIRONMENT := acc
-else
-SCHEMA_ENVIRONMENT := prod
-endif
-
 define _validate_schema =
 	echo validating schema - domain=$(2), environment=$(ENVIRONMENT), schema environment=${3} && \
 	npm i && \
 	test -f ${1} || (echo validation schema definition not found: ${SCHEMA_DEFINITION_FILE}; exit 1) && \
-	node merge-config.js $(CONFIG_BASE_FILE) domains/${DOMAIN}/${SCHEMA_ENVIRONMENT}.config.json $(CONFIG_TEST_FILE) && \
+	node merge-config.js $(CONFIG_BASE_FILE) domains/${DOMAIN}/${ENVIRONMENT}.config.json $(CONFIG_TEST_FILE) && \
 	npx ajv-cli@3.3.0 validate --all-errors -s ${SCHEMA_DEFINITION_FILE} -d $(CONFIG_TEST_FILE);
 endef
 
@@ -94,11 +88,11 @@ logs: ## tail Docker Compose container logs
 	docker-compose logs --tail=100 -f ${DOMAIN}
 
 validate-local-schema: ## validate configuration schema in current branch. Usage `make SIGNALS_FRONTEND_PATH=../signals-frontend DOMAIN=amsterdam ENVIRONMENT=development validate-local-schema`
-	@$(call _validate_schema,$(SCHEMA_DEFINITION_FILE),$(DOMAIN),$(SCHEMA_ENVIRONMENT))
+	@$(call _validate_schema,$(SCHEMA_DEFINITION_FILE),$(DOMAIN),$(ENVIRONMENT))
 
 download-schema: ## download JSON validation schema definition to /tmp
 ifeq ("$(wildcard $(SCHEMA_DEFINITION_TEMP_FILE))","")
-	@echo downloading schema from ${SIGNALS_FRONTEND_REPOSITORY_NAME} ${SCHEMA_ENVIRONMENT} to ${SCHEMA_DEFINITION_TEMP_FILE}
+	@echo downloading schema from ${SIGNALS_FRONTEND_REPOSITORY_NAME} ${ENVIRONMENT} to ${SCHEMA_DEFINITION_TEMP_FILE}
 	@wget --no-clobber \
 		--quiet https://github.com/${GITHUB_REPOSITORY_OWNER}/${SIGNALS_FRONTEND_REPOSITORY_NAME}/raw/${SCHEMA_DEFINITION_GIT_REF}/internals/schemas/${CONFIGURATION_SCHEMA_FILE} \
 		-O ${SCHEMA_DEFINITION_TEMP_FILE}
@@ -112,4 +106,4 @@ validate-all-schemas: download-schema ## validate all domain JSON schema configu
 	)
 
 validate-schema: download-schema ## validate single domain schema configuration file. Usage `make DOMAIN=amsterdam ENVIRONMENT=development SCHEMA_DEFINITION_GIT_REF=master validate-schema`
-	$(call _validate_schema,$(SCHEMA_DEFINITION_TEMP_FILE),$(DOMAIN),$(SCHEMA_ENVIRONMENT))
+	$(call _validate_schema,$(SCHEMA_DEFINITION_TEMP_FILE),$(DOMAIN),$(ENVIRONMENT))
