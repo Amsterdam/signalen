@@ -12,7 +12,7 @@
     "appMode": true
   },
   "oidc": {
+    "authEndpoint": "https://api.data.amsterdam.nl/oauth2/authorize",
     "realm": "datapunt-ad"
-    "authEndpoint": "https://api.data.amsterdam.nl/oauth2/authorize"
   }
 }
