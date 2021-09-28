@@ -3,7 +3,7 @@
 signalenAcceptancePipeline {
   ENVIRONMENT = 'acceptance' // Deploy environment
   JENKINS_GITHUB_CREDENTIALS_ID = '5b5e63e2-8db7-48c7-8e14-41cbd10eeb4a' // Global Jenkins Github secret token ID
-  DOMAINS = ['amsterdam', 'amsterdamsebos', 'weesp'] // Front-end domains to build and deploy
+  DOMAINS = ['amsterdam', 'amsterdamsebos', 'weesp', 'app'] // Front-end domains to build and deploy
 
   JENKINS_TARGET = 'production' // Docker is used for development, production for production
   SIGNALEN_BRANCH = 'develop' // Signalen branch to build
