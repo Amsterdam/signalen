@@ -13,8 +13,5 @@
   },
   "oidc": {
     "authEndpoint": "https://acc.api.data.amsterdam.nl/oauth2/authorize"
-  },
-  "featureFlags": {
-    "appMode": true
   }
 }
