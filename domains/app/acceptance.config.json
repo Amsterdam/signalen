@@ -8,6 +8,9 @@
   "matomo": {
     "siteId": 14
   },
+  "featureFlags": {
+    "appMode": true
+  },
   "oidc": {
     "authEndpoint": "https://acc.api.data.amsterdam.nl/oauth2/authorize"
   }

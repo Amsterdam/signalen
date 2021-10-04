@@ -47,8 +47,5 @@
   },
   "matomo": {
     "siteId": 14
-  },
-  "oidc": {
-    "authEndpoint": "https://acc.api.data.amsterdam.nl/oauth2/authorize"
   }
 }
