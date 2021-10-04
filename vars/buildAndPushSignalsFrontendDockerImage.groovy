@@ -1,4 +1,4 @@
-def call(String dockerBuildArgRegistryHost, String gitRef, String buildPath = 'signals-frontend') {
+def call(String dockerBuildArgRegistryHost, String environment, String gitRef, String buildPath = 'signals-frontend') {
   log.console("building signals-frontend @ ${gitRef}")
   log.console("${env.DOCKER_REGISTRY_HOST} ${env.DOCKER_REGISTRY_AUTH}")
 
@@ -7,8 +7,9 @@ def call(String dockerBuildArgRegistryHost, String gitRef, String buildPath = 's
       def image = docker.build(
         "ois/signalsfrontend:${env.BUILD_NUMBER}", [
           '--shm-size 1G',
-          "--build-arg DOCKER_REGISTRY=${dockerBuildArgRegistryHost} ",
+          "--build-arg DOCKER_REGISTRY=${dockerBuildArgRegistryHost}",
           "--build-arg BUILD_NUMBER=${env.BUILD_NUMBER}",
+          "--build-arg BUILD_ENV=${environment}",
           "--build-arg GIT_BRANCH=${gitRef}",
           "${env.WORKSPACE}/${buildPath}"
         ].join(' ')

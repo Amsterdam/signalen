@@ -107,6 +107,7 @@ def call(Closure body) {
       stage('Build `signals-frontend` Base Image') {
         steps { buildAndPushSignalsFrontendDockerImage(
           pipelineParams.DOCKER_BUILD_ARG_REGISTRY_HOST,
+          pipelineParams.ENVIRONMENT,
           params.SIGNALS_FRONTEND_RELEASE_TAG)
         }
       }
