@@ -78,7 +78,7 @@ def call(Closure body) {
       choice(
         description: 'build and deploy a single domain instead of all domains',
         name: 'DOMAIN',
-        choices: ['', 'weesp', 'amsterdam', 'amsterdamsebos']
+        choices: ['', 'weesp', 'amsterdam', 'amsterdamsebos', 'app']
       )
     }
 
