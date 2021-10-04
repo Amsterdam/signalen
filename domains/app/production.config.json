@@ -8,10 +8,11 @@
   "matomo": {
     "siteId": 13
   },
-  "oidc": {
-    "realm": "datapunt-ad"
-  },
   "featureFlags": {
     "appMode": true
+  },
+  "oidc": {
+    "realm": "datapunt-ad"
+    "authEndpoint": "https://api.data.amsterdam.nl/oauth2/authorize"
   }
 }
