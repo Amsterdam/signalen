@@ -6,9 +6,9 @@ def buildAndPushDockerImage(String dockerBuildArgRegistryHost, String environmen
     docker.withRegistry(env.DOCKER_REGISTRY_HOST, env.DOCKER_REGISTRY_AUTH) {
       def image = docker.build(
         "ois/signals-${domain}:${env.BUILD_NUMBER}", [
-          "--build-arg DOCKER_REGISTRY=${dockerBuildArgRegistryHost} ",
-          '--shm-size 1G ',
-          "--build-arg BUILD_ENV=${environment} ",
+          "--build-arg DOCKER_REGISTRY=${dockerBuildArgRegistryHost}",
+          '--shm-size 1G',
+          "--build-arg BUILD_ENV=${environment}",
           "${env.WORKSPACE}/signalen/domains/${domain}"
         ].join(' ')
       )

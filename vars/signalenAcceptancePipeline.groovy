@@ -68,6 +68,7 @@ def call(Closure body) {
         steps {
           buildAndPushSignalsFrontendDockerImage(
             pipelineParams.DOCKER_BUILD_ARG_REGISTRY_HOST,
+            pipelineParams.ENVIRONMENT,
             pipelineParams.SIGNALS_FRONTEND_BRANCH,
             'signals-frontend'
           )
