@@ -1,5 +1,5 @@
 ARG DOCKER_REGISTRY=docker-registry.data.amsterdam.nl
-FROM ${DOCKER_REGISTRY}/ois/signalsfrontend:latest
+FROM ${DOCKER_REGISTRY}signalsfrontend:latest
 
 ARG BUILD_ENV=production
 
