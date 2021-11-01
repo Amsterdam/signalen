@@ -39,7 +39,7 @@ services:
   app:
     build:
       dockerfile: Dockerfile
-      context: ./domains/weesp/
+      context: ./domains/app/
       args:
         - BUILD_ENV=production
         - DOCKER_IMAGE=signalsfrontend
