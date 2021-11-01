@@ -17,9 +17,10 @@ GITHUB_REPOSITORY_OWNER ?= Amsterdam
 SIGNALS_FRONTEND_REPOSITORY_NAME ?= signals-frontend
 IMAGE_TAG ?= latest
 SCHEMA_DEFINITION_GIT_REF ?= master
-DOCKER_REGISTRY ?= docker-registry.data.amsterdam.nl/ois/
+DOCKER_REGISTRY ?= docker-registry.data.amsterdam.nl
+DOCKER_REGISTRY_PATH ?= /ois/
 SIGNALS_FRONTEND_IMAGE_NAME ?= signalsfrontend
-SIGNALS_FRONTEND_FULL_IMAGE_NAME ?= '${DOCKER_REGISTRY}${SIGNALS_FRONTEND_IMAGE_NAME}:${IMAGE_TAG}'
+SIGNALS_FRONTEND_FULL_IMAGE_NAME ?= '${DOCKER_REGISTRY}${DOCKER_REGISTRY_PATH}${SIGNALS_FRONTEND_IMAGE_NAME}:${IMAGE_TAG}'
 
 # dynamic globals
 DOMAINS := $(subst /,,$(subst ./domains/,,$(dir $(wildcard ./domains/*/))))
