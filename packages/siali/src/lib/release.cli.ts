@@ -185,7 +185,12 @@ export const startRelease = async (version: string, repositoryId: string, releas
   const oid = await releaseService.getLastCommitOid('develop')
 
   await releaseService.createBranch(repositoryId, `refs/heads/release/${version}`, oid)
-  await releaseService.createPullRequest(`Release/${version}`, repositoryId, 'master', `refs/heads/release/${version}`)
+  const mutation: any = await releaseService.createPullRequest(`Release/${version}`, repositoryId, 'master', `refs/heads/release/${version}`)
+
+  const pendingRelease = await loadPendingRelease(releaseService)
+  const release = pendingRelease ? await loadRelease(pendingRelease, releaseService) : undefined
+
+  await releaseService.updateGitHubDescription(mutation.createPullRequest.pullRequest.id, release?.localDescription || '')
 
   await pause()
 }
