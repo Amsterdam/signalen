@@ -1,4 +1,7 @@
 {
+  "featureFlags": {
+    "showThorButton": true
+  },
   "language": {
     "siteTitle": "Meldingen Amsterdamse Bos",
     "siteAddress": "meldingenamsterdamsebos.amsterdam.nl",
