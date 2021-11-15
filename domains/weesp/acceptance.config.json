@@ -1,6 +1,7 @@
 {
   "featureFlags": {
-    "fetchQuestionsFromBackend": true
+    "fetchQuestionsFromBackend": true,
+    "showThorButton": true
   },
   "language": {
     "footer2": "maandag tot en met vrijdag van 08.00 tot 17.00 uur.",
