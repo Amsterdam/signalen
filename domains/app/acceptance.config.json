@@ -10,5 +10,19 @@
   },
   "featureFlags": {
     "appMode": true
+  },
+  "map": {
+    "options": {
+      "maxBounds": [
+        [
+          52.25168,
+          4.64034
+        ],
+        [
+          52.50536,
+          5.156252
+        ]
+      ]
+    }
   }
 }
