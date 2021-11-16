@@ -1,5 +1,5 @@
 def call(String dockerBuildArgRegistryHost, String environment, String frontendGitRef, String domainGitRef = 'develop', String buildPath = 'signals-frontend') {
-  log.console("building signals-frontend @ ${gitRef}")
+  log.console("building signals-frontend @ ${frontendGitRef}")
   log.console("${env.DOCKER_REGISTRY_HOST} ${env.DOCKER_REGISTRY_AUTH}")
 
   try {
@@ -20,7 +20,7 @@ def call(String dockerBuildArgRegistryHost, String environment, String frontendG
       signalen.pushImageToDockerRegistry(image, 'latest')
     }
   } catch (Throwable throwable) {
-    log.error("build of Docker image signals-frontend ${gitRef} failed")
+    log.error("build of Docker image signals-frontend ${frontendGitRef} failed")
     throw throwable
   }
 }
