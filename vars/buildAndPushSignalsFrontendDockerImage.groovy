@@ -1,4 +1,4 @@
-def call(String dockerBuildArgRegistryHost, String environment, String frontendGitRef, String domainGitRef = 'develop', String buildPath = 'signals-frontend') {
+def call(String dockerBuildArgRegistryHost, String environment, String frontendGitRef, String domainGitRef, String buildPath = 'signals-frontend') {
   log.console("building signals-frontend @ ${frontendGitRef}")
   log.console("${env.DOCKER_REGISTRY_HOST} ${env.DOCKER_REGISTRY_AUTH}")
 

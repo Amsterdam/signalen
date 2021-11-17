@@ -70,7 +70,7 @@ def call(Closure body) {
             pipelineParams.DOCKER_BUILD_ARG_REGISTRY_HOST,
             pipelineParams.ENVIRONMENT,
             pipelineParams.SIGNALS_FRONTEND_BRANCH,
-            'signals-frontend'
+            pipelineParams.SIGNALEN_BRANCH,
           )
         }
       }
