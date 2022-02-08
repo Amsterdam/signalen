@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang=nl>
+
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Melding openbare ruimte en overlast - Tijdelijk in onderhoud - Gemeente Amsterdam</title>
+  <link rel="stylesheet" href="https://static.amsterdam.nl/fonts/fonts.css" />
+  <link rel=icon href="https://www.amsterdam.nl/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="https://www.amsterdam.nl/apple-touch-icon.png">
+
+  <style>
+    .visuallyhidden,
+    .tekstbrowser {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px
+    }
+
+    .visuallyhidden.focusable:active,
+    .tekstbrowser.focusable:active,
+    .visuallyhidden.focusable:focus,
+    .tekstbrowser.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto
+    }
+
+    img,
+    table,
+    th,
+    td {
+      border-style: solid;
+      border-width: 0
+    }
+
+    div.ptekst {
+      padding: 8px
+    }
+
+    .ptekst p,
+    .summary p {
+      margin: 0;
+      padding: 0
+    }
+
+    .verborgen {
+      display: none
+    }
+
+    .formulier legend {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px
+    }
+
+    .formulier legend.focusable:active,
+    .formulier legend.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto
+    }
+
+    .formulier fieldset.rij legend.label,
+    .formulier fieldset legend.tussenkop {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto
+    }
+
+    .noborder {
+      border: 0 solid transparent
+    }
+
+    .clearleft {
+      clear: left
+    }
+
+    .center,
+    .text-align-center {
+      text-align: center
+    }
+
+    .text-align-left {
+      text-align: left
+    }
+
+    .text-align-right {
+      text-align: right
+    }
+
+    span.center {
+      display: block
+    }
+
+    .separator {
+      clear: both
+    }
+
+    ol.list-style-type-lower-alpha {
+      list-style-type: lower-alpha
+    }
+
+    ol.list-style-type-upper-alpha {
+      list-style-type: upper-alpha
+    }
+
+    ol.list-style-type-lower-roman {
+      list-style-type: lower-roman
+    }
+
+    ol.list-style-type-upper-roman {
+      list-style-type: upper-roman
+    }
+
+    ol.list-style-type-decimal {
+      list-style-type: decimal
+    }
+
+    .selected-item,
+    .nav-primair-uitvalmenu-label {
+      font-weight: 700
+    }
+
+    fieldset {
+      border: 0 transparent
+    }
+
+    .js .hotspots {
+      display: none
+    }
+
+    .hotspot_popup {
+      display: block;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #000;
+      width: 200px;
+      color: #000;
+      z-index: 20
+    }
+
+    .hotspot_popup .popupheader {
+      border-bottom: 1px solid #000;
+      width: 100%
+    }
+
+    .hotspot_popup .popupheader * {
+      margin-top: 0
+    }
+
+    .hotspot_popup .popupheader .titel {
+      font-weight: 700;
+      padding-left: .5em
+    }
+
+    .hotspot_popup .sluitkruis {
+      float: right
+    }
+
+    .hotspot_popup .sluitkruis a {
+      font-weight: 700;
+      text-decoration: none
+    }
+
+    .hotspot_popup .sluitkruis a .text {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px
+    }
+
+    .hotspot_popup .sluitkruis a .text.focusable:active,
+    .hotspot_popup .sluitkruis a .text.focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto
+    }
+
+    .hotspot_popup .ptekst .iprox-content {
+      margin: 0
+    }
+
+    .imagemapplaceholder {
+      display: block;
+      position: relative
+    }
+
+    .imagemapplaceholder>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      border: none
+    }
+
+    .imagemapplaceholder img.imagemap_overlay {
+      position: absolute;
+      z-index: 5
+    }
+
+    .imagemapplaceholder img.transp {
+      width: 100% !important;
+      max-width: none !important;
+      height: 100% !important;
+      max-height: none !important;
+      z-index: 10
+    }
+
+    .imagemapplaceholder a.imagemap_icoon {
+      position: absolute;
+      z-index: 15
+    }
+
+    #Cookies_question,
+    #Cookies_status {
+      clear: both
+    }
+
+    #Cookies_question .story,
+    #Cookies_question .cookie_forms,
+    #Cookies_question .cookie_forms form,
+    #Cookies_question .cookie_forms form .cookies_buttons {
+      display: inline
+    }
+
+    #Cookies_status .cookie_forms {
+      display: none
+    }
+
+    #Cookies_status .cookie_forms form,
+    #Cookies_status .cookie_forms form .cookies_buttons {
+      display: inline
+    }
+
+    #Cookies_status .text button {
+      cursor: pointer
+    }
+
+    @media print {
+
+      .js .hotspots h2,
+      .js .hotspots div.hotspot {
+        display: block
+      }
+
+      .hotspot_popup,
+      .imagemapplaceholder img.transp {
+        display: none
+      }
+
+      #Cookies_question,
+      #Cookies_status {
+        display: none
+      }
+    }
+  </style>
+  <link rel=stylesheet media=screen href="https://www.amsterdam.nl/views/core/css/baseline-grid.css">
+  <link rel=stylesheet href="https://www.amsterdam.nl/views/core/css/typo.css">
+  <link rel=stylesheet media=screen href="https://www.amsterdam.nl/views/core/css/amsterdam.css">
+  <style>
+    /* Regular */
+    @font-face {
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://www.amsterdam.nl/views/core/fonts/AvenirAll/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2) format("woff2"), url(https://www.amsterdam.nl/views/core/fonts/AvenirAll/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff) format("woff");
+    }
+
+    /* Demi */
+    @font-face {
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://www.amsterdam.nl/views/core/fonts/AvenirAll/aad99a1f-7917-4dd6-bbb5-b07cedbff64f.woff2) format("woff2"), url(https://www.amsterdam.nl/views/core/fonts/AvenirAll/aad99a1f-7917-4dd6-bbb5-b07cedbff64f.woff) format("woff");
+    }
+
+    /* Bold */
+    @font-face {
+      font-family: "Avenir Next";
+      font-style: normal;
+      font-weight: 800;
+      font-display: swap;
+      src: url(https://www.amsterdam.nl/views/core/fonts/AvenirAll/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2) format("woff2"), url(https://www.amsterdam.nl/views/core/fonts/AvenirAll/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff) format("woff");
+    }
+
+    html,
+    body,
+    .outer-wrapper {
+      margin: 0;
+      height: 100%;
+    }
+
+    .outer-wrapper {
+      font-family: Avenir Next, Arial, Helvetica, sans-serif;
+    }
+
+    .notice {
+      background-color: #ec0000;
+      color: white;
+      padding: 10px 15px;
+    }
+
+    .notice strong {
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body class="nojs page_body regular no-embed no-cmpgn no-sbst has-lazy-loading-images">
+  <div class="outer-wrapper rootlevel pagecolor-red">
+    <div class="grid-wrapper wrapper_12 header-wrapper">
+      <div class="grid-container container_12 grid-header-logo">
+        <div class="grid-zone grid_12 z-logo">
+          <div class="grid-blok type-logo grid_6">
+            <div class="grid-element">
+              <div class="grid-edge">
+                <div class="grid-inside">
+                  <h1 class=sitelogo>
+                    <a class=mainlogo href="https://www.amsterdam.nl/">
+                      <span class=logoset>
+                        <img src="https://www.amsterdam.nl/views/core/images/logos/andreas.svg" class="screen-logo"
+                          alt="Gemeente Amsterdam">
+                        <img src="https://www.amsterdam.nl/views/core/images/logos/andreas.png" class="alt-logo"
+                          alt="Gemeente Amsterdam">
+                        <img src="https://www.amsterdam.nl/views/core/images/logos/andreas-print.png" class="print-logo"
+                          alt="Gemeente Amsterdam">
+                      </span>
+                      <span class=logotexts>
+                        <span class="logotext red">Gemeente</span>
+                        <span class="logotext red">Amsterdam</span>
+                      </span>
+                    </a>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-blok type-nav-secundair grid_6">
+            <div class="grid-element">
+              <div class="grid-edge">
+                <div class="grid-inside">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zone-clear clear"></div>
+        </div>
+        <div class=clear></div>
+      </div>
+      <div class="grid-container container_12 grid-header-nav breakout-container">
+        <div class="grid-zone grid_12 z-nav">
+          <div class="grid-blok grid_12 type-nav-primair">
+            <div class="grid-element">
+              <div class="grid-edge">
+                <div class="grid-title"></div>
+                <div class="grid-inside"></div>
+              </div>
+            </div>
+          </div>
+          <div class="zone-clear clear"></div>
+        </div>
+        <div class=clear></div>
+      </div>
+    </div>
+    <div id=WebNote_19824 data-swiftype-index=false data-nosnippet=true
+      class="grid-wrapper wrapper_12 alert-wrapper bgcolor-support-yellow ie-only verborgen">
+      <div class="grid-container container_12"><a class=sluitkruis href="?mode=hide_WebNote_19824">Verbergen</a>
+        <div class="melding iprox-rich-content">
+          <p>Deze browser wordt niet meer ondersteund. Gebruik een recente versie van Edge, Chrome of Firefox.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class=clear></div>
+
+    <div id=Content class="grid-wrapper wrapper_12 contents-wrapper contains-long-read">
+      <div class="grid-container container_12 grid-modern-regular-content g-3-3-1 artikel content">
+        <div id=main class="">
+          <div id=zone_title class="grid-zone z-title zone_title grid_9 z1 suffix_3 autofill norows"><br>
+          </div>
+          <div class="cc-clear-z1"></div>
+          <div id=zone_content class="grid-zone z-content zone_content grid_9 z2 contentzone autofill norows">
+            <div class="grid-blok grid_8 grid-pagina has_no_basafb suffix_1"
+              data-layout="{&quot;columns&quot;:9,&quot;DimSiz&quot;:720,&quot;MinSiz&quot;:240}">
+              <div class="grid-element">
+                <h1>Melding openbare ruimte en overlast</h1>
+                <div class="notice">
+                  <strong>Tijdelijk in onderhoud</strong>
+                  <p>Wij verbeteren constant onze dienstverlening. Daarom vindt er op dit moment
+                    kortstondig onderhoud plaats op deze pagina.</p>
+                </div>
+              </div>
+            </div><br>
+          </div>
+          <div class="cc-clear-z2"></div>
+          <div id=zone_aside class="grid-zone z-aside zone_aside grid_3 z3 right_margezone margezone autofill norows">
+            <br>
+          </div>
+          <div class="cc-clear-z3"></div>
+        </div>
+        <div class=clear></div>
+      </div>
+    </div>
+    <div class=clear></div>
+
+    <div id=Footer data-swiftype-index=false class="grid-wrapper wrapper_12 footer-wrapper">
+      <footer>
+        <div class="grid-container container_12 grid-footer breakout-container">
+          <div id=zone_footer
+            class="grid-zone z-footer zone_footer grid_12 z1 regularrows breakout-zone hasbgcolor bgcolor-neutral-grey4">
+
+          </div>
+          <div class="cc-clear-z1"></div>
+        </div>
+      </footer>
+    </div>
+    <div class=clear></div>
+    <div class="print-payoff"></div>
+    <div class=clear></div>
+  </div>
+</body>
+
+</html
