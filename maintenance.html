@@ -7,279 +7,6 @@
   <link rel="stylesheet" href="https://static.amsterdam.nl/fonts/fonts.css" />
   <link rel=icon href="https://www.amsterdam.nl/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="https://www.amsterdam.nl/apple-touch-icon.png">
-
-  <style>
-    .visuallyhidden,
-    .tekstbrowser {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px
-    }
-
-    .visuallyhidden.focusable:active,
-    .tekstbrowser.focusable:active,
-    .visuallyhidden.focusable:focus,
-    .tekstbrowser.focusable:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      width: auto
-    }
-
-    img,
-    table,
-    th,
-    td {
-      border-style: solid;
-      border-width: 0
-    }
-
-    div.ptekst {
-      padding: 8px
-    }
-
-    .ptekst p,
-    .summary p {
-      margin: 0;
-      padding: 0
-    }
-
-    .verborgen {
-      display: none
-    }
-
-    .formulier legend {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px
-    }
-
-    .formulier legend.focusable:active,
-    .formulier legend.focusable:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      width: auto
-    }
-
-    .formulier fieldset.rij legend.label,
-    .formulier fieldset legend.tussenkop {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      width: auto
-    }
-
-    .noborder {
-      border: 0 solid transparent
-    }
-
-    .clearleft {
-      clear: left
-    }
-
-    .center,
-    .text-align-center {
-      text-align: center
-    }
-
-    .text-align-left {
-      text-align: left
-    }
-
-    .text-align-right {
-      text-align: right
-    }
-
-    span.center {
-      display: block
-    }
-
-    .separator {
-      clear: both
-    }
-
-    ol.list-style-type-lower-alpha {
-      list-style-type: lower-alpha
-    }
-
-    ol.list-style-type-upper-alpha {
-      list-style-type: upper-alpha
-    }
-
-    ol.list-style-type-lower-roman {
-      list-style-type: lower-roman
-    }
-
-    ol.list-style-type-upper-roman {
-      list-style-type: upper-roman
-    }
-
-    ol.list-style-type-decimal {
-      list-style-type: decimal
-    }
-
-    .selected-item,
-    .nav-primair-uitvalmenu-label {
-      font-weight: 700
-    }
-
-    fieldset {
-      border: 0 transparent
-    }
-
-    .js .hotspots {
-      display: none
-    }
-
-    .hotspot_popup {
-      display: block;
-      position: absolute;
-      background-color: #fff;
-      border: 1px solid #000;
-      width: 200px;
-      color: #000;
-      z-index: 20
-    }
-
-    .hotspot_popup .popupheader {
-      border-bottom: 1px solid #000;
-      width: 100%
-    }
-
-    .hotspot_popup .popupheader * {
-      margin-top: 0
-    }
-
-    .hotspot_popup .popupheader .titel {
-      font-weight: 700;
-      padding-left: .5em
-    }
-
-    .hotspot_popup .sluitkruis {
-      float: right
-    }
-
-    .hotspot_popup .sluitkruis a {
-      font-weight: 700;
-      text-decoration: none
-    }
-
-    .hotspot_popup .sluitkruis a .text {
-      border: 0;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px
-    }
-
-    .hotspot_popup .sluitkruis a .text.focusable:active,
-    .hotspot_popup .sluitkruis a .text.focusable:focus {
-      clip: auto;
-      height: auto;
-      margin: 0;
-      overflow: visible;
-      position: static;
-      width: auto
-    }
-
-    .hotspot_popup .ptekst .iprox-content {
-      margin: 0
-    }
-
-    .imagemapplaceholder {
-      display: block;
-      position: relative
-    }
-
-    .imagemapplaceholder>img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      border: none
-    }
-
-    .imagemapplaceholder img.imagemap_overlay {
-      position: absolute;
-      z-index: 5
-    }
-
-    .imagemapplaceholder img.transp {
-      width: 100% !important;
-      max-width: none !important;
-      height: 100% !important;
-      max-height: none !important;
-      z-index: 10
-    }
-
-    .imagemapplaceholder a.imagemap_icoon {
-      position: absolute;
-      z-index: 15
-    }
-
-    #Cookies_question,
-    #Cookies_status {
-      clear: both
-    }
-
-    #Cookies_question .story,
-    #Cookies_question .cookie_forms,
-    #Cookies_question .cookie_forms form,
-    #Cookies_question .cookie_forms form .cookies_buttons {
-      display: inline
-    }
-
-    #Cookies_status .cookie_forms {
-      display: none
-    }
-
-    #Cookies_status .cookie_forms form,
-    #Cookies_status .cookie_forms form .cookies_buttons {
-      display: inline
-    }
-
-    #Cookies_status .text button {
-      cursor: pointer
-    }
-
-    @media print {
-
-      .js .hotspots h2,
-      .js .hotspots div.hotspot {
-        display: block
-      }
-
-      .hotspot_popup,
-      .imagemapplaceholder img.transp {
-        display: none
-      }
-
-      #Cookies_question,
-      #Cookies_status {
-        display: none
-      }
-    }
-  </style>
   <link rel=stylesheet media=screen href="https://www.amsterdam.nl/views/core/css/baseline-grid.css">
   <link rel=stylesheet href="https://www.amsterdam.nl/views/core/css/typo.css">
   <link rel=stylesheet media=screen href="https://www.amsterdam.nl/views/core/css/amsterdam.css">
@@ -306,9 +33,13 @@
     @font-face {
       font-family: "Avenir Next";
       font-style: normal;
-      font-weight: 800;
+      font-weight: 900;
       font-display: swap;
       src: url(https://www.amsterdam.nl/views/core/fonts/AvenirAll/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff2) format("woff2"), url(https://www.amsterdam.nl/views/core/fonts/AvenirAll/627fbb5a-3bae-4cd9-b617-2f923e29d55e.woff) format("woff");
+    }
+
+    img {
+      border: 0;
     }
 
     html,
@@ -390,16 +121,6 @@
         <div class=clear></div>
       </div>
     </div>
-    <div id=WebNote_19824 data-swiftype-index=false data-nosnippet=true
-      class="grid-wrapper wrapper_12 alert-wrapper bgcolor-support-yellow ie-only verborgen">
-      <div class="grid-container container_12"><a class=sluitkruis href="?mode=hide_WebNote_19824">Verbergen</a>
-        <div class="melding iprox-rich-content">
-          <p>Deze browser wordt niet meer ondersteund. Gebruik een recente versie van Edge, Chrome of Firefox.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class=clear></div>
 
     <div id=Content class="grid-wrapper wrapper_12 contents-wrapper contains-long-read">
       <div class="grid-container container_12 grid-modern-regular-content g-3-3-1 artikel content">
@@ -429,7 +150,6 @@
         <div class=clear></div>
       </div>
     </div>
-    <div class=clear></div>
 
     <div id=Footer data-swiftype-index=false class="grid-wrapper wrapper_12 footer-wrapper">
       <footer>
@@ -442,9 +162,6 @@
         </div>
       </footer>
     </div>
-    <div class=clear></div>
-    <div class="print-payoff"></div>
-    <div class=clear></div>
   </div>
 </body>
 
