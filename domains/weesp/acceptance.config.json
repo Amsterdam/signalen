@@ -1,6 +1,5 @@
 {
   "featureFlags": {
-    "fetchQuestionsFromBackend": true,
     "showThorButton": true
   },
   "language": {
