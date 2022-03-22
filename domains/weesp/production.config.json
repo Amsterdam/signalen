@@ -9,9 +9,6 @@
     "logoDescription": "Logo gemeente Weesp, naar weesp.nl"
   },
   "apiBaseUrl": "https://api.data.amsterdam.nl",
-  "links": {
-    "home": "https://www.weesp.nl"
-  },
   "logo": {
     "url": "/assets/logos/logo-weesp.svg",
     "width": "153px",
