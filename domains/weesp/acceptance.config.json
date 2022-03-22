@@ -3,13 +3,9 @@
     "showThorButton": true
   },
   "language": {
-    "helpText": "Wij zijn bereikbaar van maandag tot en met vrijdag van 8.00 tot 17.00 uur.",
-    "helpTextHeader": "Lukt het niet om een melding te doen? Bel het telefoonnummer [(0294) 491 391](tel:0294491391)",
-    "phoneNumber": "(0294) 491 391",
     "siteAddress": "meldingenweesp.amsterdam.nl",
     "siteTitle": "Meldingen Weesp",
     "title": "Meldingen Weesp",
-    "urgentContactInfo": "Voor spoedeisende zaken kunt u ook telefonisch contact opnemen met (0294) 491 391.",
     "logoDescription": "Logo gemeente Weesp, naar weesp.nl"
   },
   "apiBaseUrl": "https://acc.api.data.amsterdam.nl",
