@@ -9,7 +9,7 @@ module.exports = {
     'plugin:node/recommended',
     'plugin:unicorn/recommended'
   ],
-  plugins: ['graphql', 'node', 'promise', 'unicorn'],
+  plugins: ['node', 'promise', 'unicorn'],
   rules: {
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
