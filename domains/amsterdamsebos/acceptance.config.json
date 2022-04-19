@@ -9,10 +9,7 @@
   },
   "apiBaseUrl": "https://acc.api.data.amsterdam.nl",
   "map": {
-    "municipality": [
-      "amsterdam",
-      "amstelveen"
-    ],
+    "municipality": "amsterdam amstelveen",
     "options": {
       "maxBounds": [
         [

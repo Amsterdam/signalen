@@ -9,7 +9,7 @@
   },
   "apiBaseUrl": "https://api.data.amsterdam.nl",
   "map": {
-    "municipality": ["amsterdam", "amstelveen"],
+    "municipality": "amsterdam amstelveen",
     "options": {
       "maxBounds": [
         [52.25168, 4.64034],
