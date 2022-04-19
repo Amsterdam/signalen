@@ -22,7 +22,7 @@
     "terminal-link": "^2.1.1"
   },
   "devDependencies": {
-    "@oclif/dev-cli": "^1",
+    "@oclif/dev-cli": "^1.26.10",
     "@oclif/test": "^1",
     "@octokit/graphql-schema": "^8.9.1",
     "@types/chai": "^4",
@@ -35,7 +35,6 @@
     "eslint": "^7.1.0",
     "eslint-config-oclif": "^3.1",
     "eslint-config-oclif-typescript": "^0.1",
-    "eslint-plugin-graphql": "^4.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "mocha": "^7.2.0",
     "nyc": "^15.1.0",
