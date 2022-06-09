@@ -20,6 +20,7 @@ import {
 } from './release.cli'
 
 import ReleaseService from './release.service'
+import {resetFlags} from "../flags"
 
 const menuGoBack = () => ({name: '🛩  go back ...', value: () => { console.clear() }})
 
@@ -108,6 +109,19 @@ export async function lastReleases(releaseService: ReleaseService, releases: und
   ])
 }
 
+export async function resetConfig() {
+  const clear = await confirm(`
+    Do you want to clear the following flags: 
+    repository, gitHubToken, jiraUrl, jiraUser, jiraToken. 
+    When yes, after clearing these flags, the siali process will exit.
+    `)
+  if (clear){
+    resetFlags()
+    process.exit()
+  }
+  menuGoBack()
+}
+
 export async function mainMenu(
   latestRelease: ReleaseSummary | undefined,
   pendingRelease: Release | undefined,
@@ -166,6 +180,14 @@ export async function mainMenu(
     name: '🌴 browse last releases',
     value: async () => {
       await lastReleases(releaseService)
+      return mainMenu(latestRelease, pendingRelease, releaseService)
+    }
+  })
+
+  choices.push({
+    name: '🌊 reset config',
+    value: async () => {
+      await resetConfig()
       return mainMenu(latestRelease, pendingRelease, releaseService)
     }
   })
