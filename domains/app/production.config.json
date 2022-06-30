@@ -1,8 +1,5 @@
 {
   "apiBaseUrl": "https://api.data.amsterdam.nl",
-  "matomo": {
-    "siteId": 13
-  },
   "featureFlags": {
     "appMode": true
   },

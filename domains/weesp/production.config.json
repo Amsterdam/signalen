@@ -25,9 +25,6 @@
       "minZoom": 8
     }
   },
-  "matomo": {
-    "siteId": 13
-  },
   "oidc": {
     "realm": "datapunt-ad"
   }
