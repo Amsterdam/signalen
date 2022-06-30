@@ -3,9 +3,6 @@
     "showThorButton": true
   },
   "apiBaseUrl": "https://api.data.amsterdam.nl",
-  "matomo": {
-    "siteId": 13
-  },
   "oidc": {
     "realm": "datapunt-ad"
   }

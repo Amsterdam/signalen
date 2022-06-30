@@ -24,8 +24,5 @@
       "maxZoom": 14,
       "minZoom": 8
     }
-  },
-  "matomo": {
-    "siteId": 14
   }
 }

@@ -2,8 +2,5 @@
   "featureFlags": {
     "showThorButton": true
   },
-  "apiBaseUrl": "https://acc.api.data.amsterdam.nl",
-  "matomo": {
-    "siteId": 14
-  }
+  "apiBaseUrl": "https://acc.api.data.amsterdam.nl"
 }

@@ -26,6 +26,10 @@ const setFlag = async (
   return value
 }
 
+export function resetFlags() {
+  configuration.clear()
+}
+
 const gitHubTokenInstructions = 'Get personal access GitHub token from https://github.com/settings/tokens/new'
 const jiraTokenInstructions = 'Get Jira token from https://id.atlassian.com/manage-profile/security/api-tokens'
 
