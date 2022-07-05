@@ -1,6 +1,8 @@
 {
   "featureFlags": {
-    "showThorButton": true
+    "showThorButton": true,
+    "assignSignalToDepartment": true,
+    "assignSignalToEmployee": true
   },
   "apiBaseUrl": "https://acc.api.data.amsterdam.nl"
 }
